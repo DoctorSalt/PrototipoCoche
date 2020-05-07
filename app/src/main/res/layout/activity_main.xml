@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/inMotor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:text="Mazda 1.8 L (L8-DE, L8-VE)"
+        app:layout_constraintStart_toEndOf="@+id/lbMotor"
+        app:layout_constraintTop_toBottomOf="@+id/lbHP" />
+
+    <TextView
+        android:id="@+id/lbMotor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="15dp"
+        android:text="Motor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbCombustible" />
+
+    <TextView
+        android:id="@+id/inCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="1798"
+        app:layout_constraintStart_toEndOf="@+id/lbCC"
+        app:layout_constraintTop_toBottomOf="@+id/inMarcha" />
+
+    <TextView
+        android:id="@+id/inMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:text="198"
+        app:layout_constraintStart_toEndOf="@+id/lbMax"
+        app:layout_constraintTop_toBottomOf="@+id/lbTransmision" />
+
+    <TextView
+        android:id="@+id/lbCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="15dp"
+        android:text="Cilindrada"
+        app:layout_constraintStart_toEndOf="@+id/inMax"
+        app:layout_constraintTop_toBottomOf="@+id/lbMarcha" />
+
+    <TextView
+        android:id="@+id/lbTraccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="15dp"
+        android:text="Tracción"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbMotor" />
+
+    <TextView
+        android:id="@+id/inVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="RC 1.8"
+        app:layout_constraintStart_toEndOf="@+id/lbVersion"
+        app:layout_constraintTop_toBottomOf="@+id/inCC" />
+
+    <TextView
+        android:id="@+id/lbVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Version"
+        app:layout_constraintStart_toEndOf="@+id/inCuerpo"
+        app:layout_constraintTop_toBottomOf="@+id/lbCC" />
+
+    <TextView
+        android:id="@+id/inCuerpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Descapotable"
+        app:layout_constraintStart_toEndOf="@+id/lbCuerpo"
+        app:layout_constraintTop_toBottomOf="@+id/lbMax" />
+
+    <TextView
+        android:id="@+id/lbMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:text="Máxima Velocidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbTraccion" />
+
+    <TextView
+        android:id="@+id/inMarcha"
+        android:layout_width="10dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="5"
+        app:layout_constraintStart_toEndOf="@+id/lbMarcha"
+        app:layout_constraintTop_toBottomOf="@+id/inMotor" />
+
+    <TextView
+        android:id="@+id/inTransmision"
+        android:layout_width="11dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="A"
+        app:layout_constraintStart_toEndOf="@+id/lbTransmision"
+        app:layout_constraintTop_toBottomOf="@+id/inMotor" />
+
+    <TextView
+        android:id="@+id/lbMarcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:text="Marchas"
+        app:layout_constraintStart_toEndOf="@+id/inTransmision"
+        app:layout_constraintTop_toBottomOf="@+id/inMotor" />
+
+    <TextView
+        android:id="@+id/lbTransmision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Transmisión"
+        app:layout_constraintStart_toEndOf="@+id/inTraccion"
+        app:layout_constraintTop_toBottomOf="@+id/inMotor" />
+
+    <TextView
+        android:id="@+id/inTraccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:text="-d"
+        app:layout_constraintStart_toEndOf="@+id/lbTraccion"
+        app:layout_constraintTop_toBottomOf="@+id/lbMotor" />
+
+    <TextView
+        android:id="@+id/lbCuerpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:text="Cuerpo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbMax" />
+
+    <TextView
+        android:id="@+id/inHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="100"
+        app:layout_constraintStart_toEndOf="@+id/lbHP"
+        app:layout_constraintTop_toBottomOf="@+id/inAno" />
+
+    <TextView
+        android:id="@+id/lbHP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="HP"
+        app:layout_constraintStart_toEndOf="@+id/inCombustible"
+        app:layout_constraintTop_toBottomOf="@+id/lbAno" />
+
+    <TextView
+        android:id="@+id/inCombustible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="G"
+        app:layout_constraintStart_toEndOf="@+id/lbCombustible"
+        app:layout_constraintTop_toBottomOf="@+id/inMarca" />
+
+    <TextView
+        android:id="@+id/lbCombustible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="10dp"
+        android:text="Combustible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbMarca" />
+
+    <TextView
+        android:id="@+id/inMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:text="Mazda"
+        app:layout_constraintStart_toEndOf="@+id/lbMarca"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/lbMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="30dp"
+        android:text="Marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inNombre"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/inNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="144dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Año"
+        app:layout_constraintStart_toEndOf="@+id/inMarca"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/inAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="2008"
+        app:layout_constraintStart_toEndOf="@+id/lbAno"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
