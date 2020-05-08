@@ -78,7 +78,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
         String result = null;
         try {
             String[] parametros = {"idModelo", "3"};
-            String wsURL = "http://192.168.1.115/TFG/adacc.php?" + parametros[0] + "=" + parametros[1];
+            String wsURL = "http://192.168.1.33/TFG/adacc.php?" + parametros[0] + "=" + parametros[1];
             URI url = new URI(wsURL);
             // Create connection
             HttpURLConnection myConnection = (HttpURLConnection)

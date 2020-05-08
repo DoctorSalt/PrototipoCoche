@@ -10,18 +10,18 @@
         android:id="@+id/inMotor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="80dp"
         android:text="Mazda 1.8 L (L8-DE, L8-VE)"
-        app:layout_constraintStart_toEndOf="@+id/lbMotor"
-        app:layout_constraintTop_toBottomOf="@+id/lbHP" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inHP" />
 
     <TextView
         android:id="@+id/lbMotor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
         android:text="Motor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbCombustible" />
@@ -30,38 +30,38 @@
         android:id="@+id/inCC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="32dp"
         android:text="1798"
         app:layout_constraintStart_toEndOf="@+id/lbCC"
-        app:layout_constraintTop_toBottomOf="@+id/inMarcha" />
+        app:layout_constraintTop_toBottomOf="@+id/inMax" />
 
     <TextView
         android:id="@+id/inMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="76dp"
         android:text="198"
-        app:layout_constraintStart_toEndOf="@+id/lbMax"
-        app:layout_constraintTop_toBottomOf="@+id/lbTransmision" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inTransmision" />
 
     <TextView
         android:id="@+id/lbCC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
         android:text="Cilindrada"
-        app:layout_constraintStart_toEndOf="@+id/inMax"
-        app:layout_constraintTop_toBottomOf="@+id/lbMarcha" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbMax" />
 
     <TextView
         android:id="@+id/lbTraccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
         android:text="Tracción"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbMotor" />
@@ -70,169 +70,178 @@
         android:id="@+id/inVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="24dp"
         android:text="RC 1.8"
-        app:layout_constraintStart_toEndOf="@+id/lbVersion"
-        app:layout_constraintTop_toBottomOf="@+id/inCC" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inCuerpo"
+        app:layout_constraintVertical_bias="0.279" />
 
     <TextView
         android:id="@+id/lbVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="24dp"
         android:text="Version"
-        app:layout_constraintStart_toEndOf="@+id/inCuerpo"
-        app:layout_constraintTop_toBottomOf="@+id/lbCC" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbCuerpo"
+        app:layout_constraintVertical_bias="0.279" />
 
     <TextView
         android:id="@+id/inCuerpo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="44dp"
         android:text="Descapotable"
-        app:layout_constraintStart_toEndOf="@+id/lbCuerpo"
-        app:layout_constraintTop_toBottomOf="@+id/lbMax" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inMax" />
 
     <TextView
         android:id="@+id/lbMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="14dp"
         android:text="Máxima Velocidad"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbTraccion" />
+        app:layout_constraintEnd_toStartOf="@+id/inMax"
+        app:layout_constraintTop_toBottomOf="@+id/lbTransmision" />
 
     <TextView
         android:id="@+id/inMarcha"
         android:layout_width="10dp"
         android:layout_height="19dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="32dp"
         android:text="5"
         app:layout_constraintStart_toEndOf="@+id/lbMarcha"
-        app:layout_constraintTop_toBottomOf="@+id/inMotor" />
+        app:layout_constraintTop_toBottomOf="@+id/inTransmision" />
 
     <TextView
         android:id="@+id/inTransmision"
         android:layout_width="11dp"
         android:layout_height="19dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="84dp"
         android:text="A"
-        app:layout_constraintStart_toEndOf="@+id/lbTransmision"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inMotor" />
 
     <TextView
         android:id="@+id/lbMarcha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
         android:text="Marchas"
-        app:layout_constraintStart_toEndOf="@+id/inTransmision"
-        app:layout_constraintTop_toBottomOf="@+id/inMotor" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbTransmision" />
 
     <TextView
         android:id="@+id/lbTransmision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="138dp"
         android:text="Transmisión"
-        app:layout_constraintStart_toEndOf="@+id/inTraccion"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inMotor" />
 
     <TextView
         android:id="@+id/inTraccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="32dp"
         android:text="-d"
         app:layout_constraintStart_toEndOf="@+id/lbTraccion"
-        app:layout_constraintTop_toBottomOf="@+id/lbMotor" />
+        app:layout_constraintTop_toBottomOf="@+id/inMotor" />
 
     <TextView
         android:id="@+id/lbCuerpo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="154dp"
         android:text="Cuerpo"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbMax" />
 
     <TextView
         android:id="@+id/inHP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="84dp"
         android:text="100"
-        app:layout_constraintStart_toEndOf="@+id/lbHP"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inAno" />
 
     <TextView
         android:id="@+id/lbHP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="139dp"
         android:text="HP"
-        app:layout_constraintStart_toEndOf="@+id/inCombustible"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbAno" />
 
     <TextView
         android:id="@+id/inCombustible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="356dp"
         android:text="G"
-        app:layout_constraintStart_toEndOf="@+id/lbCombustible"
-        app:layout_constraintTop_toBottomOf="@+id/inMarca" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lbCombustible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="356dp"
         android:text="Combustible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbMarca" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/inMarca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="304dp"
         android:text="Mazda"
         app:layout_constraintStart_toEndOf="@+id/lbMarca"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lbMarca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="304dp"
         android:text="Marca"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="244dp"
         android:layout_height="213dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="84dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inNombre"
         app:srcCompat="@drawable/ic_launcher_background" />
 
@@ -240,29 +249,34 @@
         android:id="@+id/inNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="144dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="20dp"
         android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lbAno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="140dp"
         android:text="Año"
-        app:layout_constraintStart_toEndOf="@+id/inMarca"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/inAno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="304dp"
+        android:layout_marginEnd="80dp"
         android:text="2008"
-        app:layout_constraintStart_toEndOf="@+id/lbAno"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
