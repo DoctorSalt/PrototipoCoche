@@ -3,6 +3,8 @@ package com.example.prototipocoche;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,10 +30,12 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
     Entidad x;
     ImageView imgFoto;
     TextView inModelo, inMarca, inAno, inHP, inMotor, inCombustible, inTraccion,inTransmision, inMarcha, inMax, inCC, inCuerpo, inVersion, lbVersion;
+    Context contexto;
 
-
-    public ConectandoHTP(ImageView imgFotoR, TextView inModeloR, TextView inMarcaR, TextView inAnoR, TextView inHPR, TextView inMotorR, TextView inCombustibleR, TextView inTraccionR,
-                        TextView inTransmisionR, TextView inMarchaR, TextView inMaxR, TextView inCCR, TextView inCuerpoR, TextView inVersionR, TextView lbVersionR) {
+    public ConectandoHTP(ImageView imgFotoR, TextView inModeloR, TextView inMarcaR, TextView inAnoR, TextView inHPR,
+                         TextView inMotorR, TextView inCombustibleR, TextView inTraccionR,
+                        TextView inTransmisionR, TextView inMarchaR, TextView inMaxR, TextView inCCR,
+                         TextView inCuerpoR, TextView inVersionR, TextView lbVersionR, Context contextoR) {
         imgFoto = imgFotoR;
         inModelo = inModeloR;
         inMarca = inMarcaR;
@@ -47,6 +51,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
         inCuerpo = inCuerpoR;
         inVersion = inVersionR;
         lbVersion = lbVersionR;
+        contexto =  contextoR;
     }
 
     private String inputStreamToString(InputStream inputStream) {
@@ -151,7 +156,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
             e.printStackTrace();
         }
     }
-    public void colocaEntidad(Entidad x){
+    public void colocaEntidad(final Entidad x){
         Log.d("colocaEntidad","Nombre Modelo recogido: "+x.getNombreModelo());
         inModelo.setText(x.getNombreModelo());
         Log.d("colocaEntidad","Nombre Marca recogido: "+x.getMarca());
@@ -174,7 +179,18 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
             inVersion.setText(x.getVersion());
         }
         Log.d("colocaEntidad","Nombre img recogido: "+x.getImgFoto());
-        Picasso.with(imgFoto.getContext()).load(x.getImgFoto()).into(imgFoto);
-
+        try {
+            Handler uiHandler = new Handler(Looper.getMainLooper());
+            uiHandler.post(new Runnable() {
+                @Override
+                public void run() {
+                    Picasso.with(contexto).load(x.getImgFoto()).fit().into(imgFoto);
+                }
+            });
+        }
+      catch (Exception e){
+            Log.d("colocaEntidad","Error picasso: "+e);
+        }
+        Log.d("colocaEntidad","Coloca imagen");
     }
 }

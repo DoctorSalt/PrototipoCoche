@@ -2,6 +2,7 @@ package com.example.prototipocoche;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Entidad x;
     ImageView imgFoto;
     TextView inModelo, inMarca, inAno, inHP, inMotor, inCombustible, inTraccion, inTransmision, inMarcha, inMax, inCC, inCuerpo, inVersion, lbVersion;
+    Context contexto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
         inCuerpo = findViewById(R.id.inCuerpo);
         inVersion = findViewById(R.id.inVersion);
         lbVersion = findViewById(R.id.lbVersion);
+        contexto = getApplicationContext();
         setTitle("Coche especifico");
         llamarHttpClass();
     }
 
     private void llamarHttpClass() {
-        ConectandoHTP claes= new ConectandoHTP(imgFoto,inModelo,inMarca,inAno,inHP,inMotor,inCombustible,inTraccion,inTransmision,inMarcha,inMax,inCC,inCuerpo,inVersion,lbVersion);
+        ConectandoHTP claes= new ConectandoHTP(imgFoto,inModelo,inMarca,inAno,inHP,inMotor,inCombustible,inTraccion,inTransmision,inMarcha,inMax,inCC,inCuerpo,inVersion,lbVersion, contexto);
         claes.execute();
     }
 
