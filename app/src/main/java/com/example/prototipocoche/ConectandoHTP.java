@@ -31,6 +31,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
     ImageView imgFoto;
     TextView inModelo, inMarca, inAno, inHP, inMotor, inCombustible, inTraccion,inTransmision, inMarcha, inMax, inCC, inCuerpo, inVersion, lbVersion;
     Context contexto;
+    Handler handlerFoto;
 
     public ConectandoHTP(ImageView imgFotoR, TextView inModeloR, TextView inMarcaR, TextView inAnoR, TextView inHPR,
                          TextView inMotorR, TextView inCombustibleR, TextView inTraccionR,
@@ -180,8 +181,8 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
         }
         Log.d("colocaEntidad","Nombre img recogido: "+x.getImgFoto());
         try {
-            Handler uiHandler = new Handler(Looper.getMainLooper());
-            uiHandler.post(new Runnable() {
+            handlerFoto= new Handler(Looper.getMainLooper());
+            handlerFoto.post(new Runnable() {
                 @Override
                 public void run() {
                     Picasso.with(contexto).load(x.getImgFoto()).fit().into(imgFoto);
