@@ -2,20 +2,16 @@ package com.example.prototipocoche;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,16 +23,16 @@ import java.net.URI;
 import java.net.URLDecoder;
 
 public class ConectandoHTP extends AsyncTask<Void, Void,String> {
-    Entidad x;
-    ImageView imgFoto;
-    TextView inModelo, inMarca, inAno, inHP, inMotor, inCombustible, inTraccion,inTransmision, inMarcha, inMax, inCC, inCuerpo, inVersion, lbVersion;
-    Context contexto;
-    Handler handlerFoto;
+    private Entidad x;
+    private ImageView imgFoto;
+    private TextView inModelo, inMarca, inAno, inHP, inMotor, inCombustible, inTraccion,inTransmision, inMarcha, inMax, inCC, inCuerpo, inVersion, lbVersion;
+    private Context contexto;
+    private Handler handlerFoto;
 
-    public ConectandoHTP(ImageView imgFotoR, TextView inModeloR, TextView inMarcaR, TextView inAnoR, TextView inHPR,
-                         TextView inMotorR, TextView inCombustibleR, TextView inTraccionR,
-                        TextView inTransmisionR, TextView inMarchaR, TextView inMaxR, TextView inCCR,
-                         TextView inCuerpoR, TextView inVersionR, TextView lbVersionR, Context contextoR) {
+    ConectandoHTP(ImageView imgFotoR, TextView inModeloR, TextView inMarcaR, TextView inAnoR, TextView inHPR,
+                  TextView inMotorR, TextView inCombustibleR, TextView inTraccionR,
+                  TextView inTransmisionR, TextView inMarchaR, TextView inMaxR, TextView inCCR,
+                  TextView inCuerpoR, TextView inVersionR, TextView lbVersionR, Context contextoR) {
         imgFoto = imgFotoR;
         inModelo = inModeloR;
         inMarca = inMarcaR;
@@ -56,7 +52,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
     }
 
     private String inputStreamToString(InputStream inputStream) {
-        String rLine = "";
+        String rLine;
         Log.d("InputStream","Comienzo metodo");
         StringBuilder answer = new StringBuilder();
         Log.d("InputStream","Comienza inputStreamReader");
@@ -100,7 +96,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
         }
         return result;
     }
-    protected void recogiendoRegistros(String s) {
+    private void recogiendoRegistros(String s) {
         Log.d("recogiendoRegistros", "Comienza el try");
         try {
             ///Error Sucede aqui salta a error cach json
@@ -157,7 +153,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
             e.printStackTrace();
         }
     }
-    public void colocaEntidad(final Entidad x){
+    private void colocaEntidad(final Entidad x){
         Log.d("colocaEntidad","Nombre Modelo recogido: "+x.getNombreModelo());
         inModelo.setText(x.getNombreModelo());
         Log.d("colocaEntidad","Nombre Marca recogido: "+x.getMarca());
@@ -173,7 +169,7 @@ public class ConectandoHTP extends AsyncTask<Void, Void,String> {
         inMax.setText(x.getVelocidadMaxima());
         inCC.setText(x.getCilindrada());
         inCuerpo.setText(x.getCuerpo());
-        if((x.getVersion()=="")||(x.getVersion()==null)){
+        if((x.getVersion().equals(""))||(x.getVersion()==null)){
             lbVersion.setVisibility(View.INVISIBLE);
             inVersion.setVisibility(View.INVISIBLE);
         }else{
